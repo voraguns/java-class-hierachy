@@ -7,6 +7,18 @@ class Start {
     }
 }
 
+sealed class Pool permits Student, Staff { }
+
+final class Student extends Pool { }
+non-sealed class Staff extends Pool { }
+
+class NationalTeam extends Staff { }
+
+
+sealed class Product permits Online, Offline { }
+final class Online extends Product { }
+final class Offline extends Product { }
+
 class MyNumber extends Number {
     public int intValue() { return 0; }
     public long longValue() { return 0; }
